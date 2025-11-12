@@ -8,8 +8,8 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-     public function index()
+    public function index()
     {
-        return response()->json(Product::all());
+        return response()->json(Product::orderBy('id')->get());
     }
 }
